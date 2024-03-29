@@ -32,11 +32,12 @@ if (pinAnswer.q1 === pin) {
                 type: "number",
             },
         ]);
-        if (amountAns.amount > myBalance) {
-            console.log(`Insufficient balance`);
-        }
         if (isNaN(amountAns.amount)) {
             console.log(`${amountAns.amount} is not a number. Please select a valid number`);
+        }
+        else if (amountAns.amount > myBalance) {
+            console.log(`Insufficient balance`);
+            console.log(`Please select a valid amount`);
         }
         else {
             myBalance -= amountAns.amount;
